@@ -1,7 +1,7 @@
 *{ 
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -75,6 +75,21 @@ nav ul li a:hover:after {
     color: #ff004f
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#header{
+  animation: fadeUp 1s ease forwards;
+}
+
 /* -------------------------------------------------------about--------------------------------------------- */
 #about{
     padding: 80px 0;
@@ -102,15 +117,10 @@ nav ul li a:hover:after {
     margin-top: 0;
 }
 .subtitle{
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 600;
     color:#fff;   
 }
-/* .about-col-1 img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-} */
 
 .tab-titles{
     display: flex;
@@ -154,9 +164,27 @@ nav ul li a:hover:after {
 .tab-contents.active-tab{
     display: block;
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#about{
+  animation: fadeUp 1s ease forwards;
+}
+
+
 /* -----------------------------Services-------------------- */
 #services{
     padding: 30px 0;
+    background-color:#080808 ;
 }
 .services-list{
     display: grid;
@@ -187,7 +215,147 @@ nav ul li a:hover:after {
 .services-list div:hover{
     background: #ff004f;
     transform: translateY(-10px);
+    box-shadow: 0 10px 25px white;
 }
+
+.line{
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #ff004f;
+    margin: 0 auto 10px;
+}
+
+.test{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.services-list {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ---------------------------------------------------why us---------------------------------------------------- */
+
+.whyChoose{
+    padding: 20px 60px;
+    align-items: center;
+    justify-content: center;
+
+}
+.h
+
+.why-us {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 span {
+  font-weight: 800;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: #fff;
+  margin: 25px auto 60px;
+  border-radius: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 35px 30px;
+  border-radius: 50px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s, transform 0.5s;
+}
+
+.card:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px white;
+}
+
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card h3::after {
+  content: "";
+  width: 35px;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.card ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.card ul li {
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+  font-size: 15px;
+}
+
+.card ul li::before {
+  content: "✓";
+  color: #ff004f;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.card ul li:hover {
+   content: "✓";
+   color: white 
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+
 /* ----------------------------------------Porfolio--------------------------------- */
 
 #portfolio{
@@ -314,6 +482,60 @@ form input, form textarea{
  nav .bx {
     display: none;
     }
+
+/* -------------------------------------------------Hire------------------------ */
+.Hire{
+    justify-content: center;
+    align-items: center;
+    padding: 60px 100px;
+    text-align: center;
+    background-color: #fff;
+    color: #080808;
+}
+
+.hire{
+    font-size: 50px;
+    font-weight: 900;
+    color: #080808;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+.hire2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn{
+    display: inline-block;
+    background: #ff004f;
+    width: 100px;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover{
+    color:#ff004f;
+    background-color:white ;
+}
+
+.stack-glow {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff004f;
+  }
+  to {
+    text-shadow: 0 0 20px #ff004f;
+  }
+}
 
 /* ----------------------------------CSS 4 SMALL SCREEN-------------------------------- */
 @media only screen and (max-width: 968px){
