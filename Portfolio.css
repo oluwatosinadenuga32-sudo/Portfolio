@@ -8,7 +8,19 @@
 body{
     background: #080808;
     color: #fff;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: enter 0.6s ease-out forwards;
 }
+
+@keyframes enter {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 html{
     scroll-behavior:smooth;
 }
@@ -430,7 +442,6 @@ h1 span {
 .contact-right{
     flex-basis: 60%;
 }
-
 .contact-left p{
     margin-top: 30px;
 }
@@ -549,7 +560,9 @@ form input, form textarea{
 }
 
 .stack-glow {
-  animation: glow 2s infinite alternate;
+    /* background-color: white; */
+    margin-top: 50px;
+    animation: glow 2s infinite alternate;
 }
 
 @keyframes glow {
